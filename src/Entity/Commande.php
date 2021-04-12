@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Commande
+ *
+ * @ORM\Table(name="commande", indexes={@ORM\Index(name="vendor", columns={"id_vendor"}), @ORM\Index(name="user", columns={"id_user"})})
+ * @ORM\Entity
+ */
+class Commande
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id_commande", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idCommande;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user_name", type="string", length=20, nullable=false)
+     */
+    private $userName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="vendor_name", type="string", length=20, nullable=false)
+     */
+    private $vendorName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse_livraison", type="string", length=60, nullable=false)
+     */
+    private $adresseLivraison;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="total", type="integer", nullable=false)
+     */
+    private $total;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id_user", type="integer", nullable=false)
+     */
+    private $idUser;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="id_vendor", type="integer", nullable=true, options={"default"="NULL"})
+     */
+    private $idVendor = NULL;
+
+
+}
