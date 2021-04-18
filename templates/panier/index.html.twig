@@ -1,0 +1,41 @@
+{% extends 'front.html.twig' %}
+{# {% extends 'base.html.twig' %} #}
+{% block title %}Panier test{% endblock %}
+
+{% block body %}
+    <h1>My Cart</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdPanier</th>
+                <th>IdProduct</th>
+                <th>IdUser</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for panier in paniers %}
+            <tr>
+                <td>{{ panier.idPanier }}</td>
+                <td>{{ panier.idProduct }}</td>
+                <td>{{ panier.idUser }}</td>
+                <td>{{ panier.quantity }}</td>
+                <td>{{ panier.total }}</td>
+                <td>
+                    <a href="{{ path('panier_conroller_show', {'idPanier': panier.idPanier}) }}">display</a>
+                    <a href="{{ path('panier_conroller_edit', {'idPanier': panier.idPanier}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('panier_conroller_new') }}">Create new</a>
+{% endblock %}

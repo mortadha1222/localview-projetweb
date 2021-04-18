@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reservations index{% endblock %}
+
+{% block body %}
+    <h1>Reservations index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdReservation</th>
+                <th>IdCoach</th>
+                <th>Email</th>
+                <th>DateReservation</th>
+                <th>Etat</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reservation in reservations %}
+            <tr>
+                <td>{{ reservation.idReservation }}</td>
+                <td>{{ reservation.idCoach }}</td>
+                <td>{{ reservation.email }}</td>
+                <td>{{ reservation.dateReservation ? reservation.dateReservation|date('Y-m-d') : '' }}</td>
+                <td>{{ reservation.etat }}</td>
+                <td>
+                    <a href="{{ path('reservations_show', {'idReservation': reservation.idReservation}) }}">show</a>
+                    <a href="{{ path('reservations_edit', {'idReservation': reservation.idReservation}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('reservations_new') }}">Create new</a>
+{% endblock %}
