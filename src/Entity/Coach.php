@@ -28,5 +28,22 @@ class Coach
      */
     private $idUser;
 
+    public function getIdCoach(): ?int
+    {
+        return $this->idCoach;
+    }
+
+    public function getIdUser(): ?int
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(int $idUser): self
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
 
 }

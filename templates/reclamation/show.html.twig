@@ -1,0 +1,43 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Reclamation{% endblock %}
+
+{% block body %}
+    <h1>Reclamation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reclamation.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ reclamation.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ reclamation.description }}</td>
+            </tr>
+            <tr>
+                <th>Answer</th>
+                <td>{{ reclamation.answer }}</td>
+            </tr>
+
+            <tr>
+                <th>Date</th>
+                <td>{{ reclamation.date ? reclamation.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Archive</th>
+                <td>{{ reclamation.archive }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('reclamation_index') }}"class="btn btn-outline-primary">back to list</a>
+
+    <a href="{{ path('reclamation_edit', {'id': reclamation.id}) }}"class="btn btn-outline-danger">edit</a>
+
+    {{ include('reclamation/_delete_form.html.twig') }}
+{% endblock %}

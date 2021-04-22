@@ -1,0 +1,42 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Suggestion{% endblock %}
+
+{% block body %}
+    <h1>Suggestion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ suggestion.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ suggestion.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ suggestion.description }}</td>
+            </tr>
+            <tr>
+                <th>Answer</th>
+                <td>{{ suggestion.answer }}</td>
+            </tr>
+            <tr>
+                <th>IdUser</th>
+                <td>{{ suggestion.idUser }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ suggestion.date ? suggestion.date|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('suggestion_index') }}"class="btn btn-outline-primary">back to list</a>
+
+    <a href="{{ path('suggestion_edit', {'id': suggestion.id}) }}"class="btn btn-outline-danger">edit</a>
+
+    {{ include('suggestion/_delete_form.html.twig') }}
+{% endblock %}

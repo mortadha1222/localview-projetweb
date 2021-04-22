@@ -28,5 +28,22 @@ class Member
      */
     private $idUser;
 
+    public function getIdMember(): ?int
+    {
+        return $this->idMember;
+    }
+
+    public function getIdUser(): ?int
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(int $idUser): self
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
 
 }

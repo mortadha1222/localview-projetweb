@@ -42,5 +42,46 @@ class LignePanier
      */
     private $idCommande;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getIdPanier(): ?int
+    {
+        return $this->idPanier;
+    }
+
+    public function setIdPanier(int $idPanier): self
+    {
+        $this->idPanier = $idPanier;
+
+        return $this;
+    }
+
+    public function getIdCommande(): ?int
+    {
+        return $this->idCommande;
+    }
+
+    public function setIdCommande(int $idCommande): self
+    {
+        $this->idCommande = $idCommande;
+
+        return $this;
+    }
+
 
 }

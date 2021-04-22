@@ -28,5 +28,22 @@ class Admin
      */
     private $idUser;
 
+    public function getIdAdmin(): ?int
+    {
+        return $this->idAdmin;
+    }
+
+    public function getIdUser(): ?int
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(int $idUser): self
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
 
 }

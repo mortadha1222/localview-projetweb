@@ -69,5 +69,82 @@ class Reservations
      */
     private $idPlanning;
 
+    public function getIdReservation(): ?int
+    {
+        return $this->idReservation;
+    }
+
+    public function getIdCoach(): ?int
+    {
+        return $this->idCoach;
+    }
+
+    public function setIdCoach(?int $idCoach): self
+    {
+        $this->idCoach = $idCoach;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getDateReservation(): ?\DateTimeInterface
+    {
+        return $this->dateReservation;
+    }
+
+    public function setDateReservation(?\DateTimeInterface $dateReservation): self
+    {
+        $this->dateReservation = $dateReservation;
+
+        return $this;
+    }
+
+    public function getEtat(): ?string
+    {
+        return $this->etat;
+    }
+
+    public function setEtat(?string $etat): self
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    public function getIdMember(): ?Member
+    {
+        return $this->idMember;
+    }
+
+    public function setIdMember(?Member $idMember): self
+    {
+        $this->idMember = $idMember;
+
+        return $this;
+    }
+
+    public function getIdPlanning(): ?Planning
+    {
+        return $this->idPlanning;
+    }
+
+    public function setIdPlanning(?Planning $idPlanning): self
+    {
+        $this->idPlanning = $idPlanning;
+
+        return $this;
+    }
+
 
 }

@@ -59,5 +59,70 @@ class Events
      */
     private $idMember;
 
+    public function getIdEvent(): ?int
+    {
+        return $this->idEvent;
+    }
+
+    public function getNameEve(): ?string
+    {
+        return $this->nameEve;
+    }
+
+    public function setNameEve(string $nameEve): self
+    {
+        $this->nameEve = $nameEve;
+
+        return $this;
+    }
+
+    public function getDateEve(): ?string
+    {
+        return $this->dateEve;
+    }
+
+    public function setDateEve(string $dateEve): self
+    {
+        $this->dateEve = $dateEve;
+
+        return $this;
+    }
+
+    public function getDescriptionEve(): ?string
+    {
+        return $this->descriptionEve;
+    }
+
+    public function setDescriptionEve(string $descriptionEve): self
+    {
+        $this->descriptionEve = $descriptionEve;
+
+        return $this;
+    }
+
+    public function getPhotoEve(): ?string
+    {
+        return $this->photoEve;
+    }
+
+    public function setPhotoEve(string $photoEve): self
+    {
+        $this->photoEve = $photoEve;
+
+        return $this;
+    }
+
+    public function getIdMember(): ?Member
+    {
+        return $this->idMember;
+    }
+
+    public function setIdMember(?Member $idMember): self
+    {
+        $this->idMember = $idMember;
+
+        return $this;
+    }
+
 
 }

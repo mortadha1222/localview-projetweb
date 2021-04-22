@@ -1,0 +1,44 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Archive{% endblock %}
+
+{% block body %}
+    <h1>Archive</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Answer</th>
+
+            <th>Date</th>
+
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                {% if reclamation.archive == "archive" %}
+                    <td>{{ reclamation.id }}</td>
+                    <td>{{ reclamation.title }}</td>
+                    <td>{{ reclamation.description }}</td>
+                    <td>{{ reclamation.answer }}</td>
+
+                    <td>{{ reclamation.date ? reclamation.date|date('Y-m-d') : '' }}</td>
+
+                    <td>
+                        <a href="{{ path('reclamation_desarchiver', {'id': reclamation.id}) }}"class="btn btn-outline-warning">desarchiver</a>
+                    </td>
+                {% endif %}
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

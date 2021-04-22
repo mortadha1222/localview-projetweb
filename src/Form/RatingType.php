@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Form;
+
+use App\Entity\Rating;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class RatingType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('value', ChoiceType::class,array(
+                'choices'=>array(
+                    5=>1,
+                    4=>2,
+                    3=>3,
+                    2=>4,
+                    1=>5
+                ),
+                'expanded'=>true
+
+            ))
+
+        ;
+    }
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults([
+            'data_class' => Rating::class,
+        ]);
+    }
+}

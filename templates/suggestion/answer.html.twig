@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Answer Suggestion{% endblock %}
+
+{% block body %}
+    <h1>Answer Suggestion</h1>
+
+    {{ include('suggestion/_formadmin.html.twig', {'button_label': 'Save'}) }}
+
+    <a href="{{ path('suggestion_index_admin') }}"class="btn btn-outline-primary">back to list</a>
+
+    {{ include('suggestion/_delete_form_admin.html.twig') }}
+{% endblock %}

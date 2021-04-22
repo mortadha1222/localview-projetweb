@@ -63,5 +63,82 @@ class Produits
      */
     private $idVendor = NULL;
 
+    public function getIdProduct(): ?int
+    {
+        return $this->idProduct;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getDescriptionProd(): ?string
+    {
+        return $this->descriptionProd;
+    }
+
+    public function setDescriptionProd(string $descriptionProd): self
+    {
+        $this->descriptionProd = $descriptionProd;
+
+        return $this;
+    }
+
+    public function getPrice(): ?int
+    {
+        return $this->price;
+    }
+
+    public function setPrice(int $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getPhotoProd(): ?string
+    {
+        return $this->photoProd;
+    }
+
+    public function setPhotoProd(string $photoProd): self
+    {
+        $this->photoProd = $photoProd;
+
+        return $this;
+    }
+
+    public function getStock(): ?int
+    {
+        return $this->stock;
+    }
+
+    public function setStock(int $stock): self
+    {
+        $this->stock = $stock;
+
+        return $this;
+    }
+
+    public function getIdVendor(): ?int
+    {
+        return $this->idVendor;
+    }
+
+    public function setIdVendor(?int $idVendor): self
+    {
+        $this->idVendor = $idVendor;
+
+        return $this;
+    }
+
 
 }

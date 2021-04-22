@@ -49,5 +49,58 @@ class Panier
      */
     private $total = NULL;
 
+    public function getIdPanier(): ?int
+    {
+        return $this->idPanier;
+    }
+
+    public function getIdProduct(): ?int
+    {
+        return $this->idProduct;
+    }
+
+    public function setIdProduct(?int $idProduct): self
+    {
+        $this->idProduct = $idProduct;
+
+        return $this;
+    }
+
+    public function getIdUser(): ?int
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(?int $idUser): self
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
+    public function getQuantity(): ?int
+    {
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity): self
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    public function getTotal(): ?int
+    {
+        return $this->total;
+    }
+
+    public function setTotal(?int $total): self
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
 
 }

@@ -63,5 +63,82 @@ class Commande
      */
     private $idVendor = NULL;
 
+    public function getIdCommande(): ?int
+    {
+        return $this->idCommande;
+    }
+
+    public function getUserName(): ?string
+    {
+        return $this->userName;
+    }
+
+    public function setUserName(string $userName): self
+    {
+        $this->userName = $userName;
+
+        return $this;
+    }
+
+    public function getVendorName(): ?string
+    {
+        return $this->vendorName;
+    }
+
+    public function setVendorName(string $vendorName): self
+    {
+        $this->vendorName = $vendorName;
+
+        return $this;
+    }
+
+    public function getAdresseLivraison(): ?string
+    {
+        return $this->adresseLivraison;
+    }
+
+    public function setAdresseLivraison(string $adresseLivraison): self
+    {
+        $this->adresseLivraison = $adresseLivraison;
+
+        return $this;
+    }
+
+    public function getTotal(): ?int
+    {
+        return $this->total;
+    }
+
+    public function setTotal(int $total): self
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
+    public function getIdUser(): ?int
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(int $idUser): self
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
+    public function getIdVendor(): ?int
+    {
+        return $this->idVendor;
+    }
+
+    public function setIdVendor(?int $idVendor): self
+    {
+        $this->idVendor = $idVendor;
+
+        return $this;
+    }
+
 
 }

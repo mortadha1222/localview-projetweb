@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Answer Reclamation{% endblock %}
+
+{% block body %}
+    <h1>Answer Reclamation</h1>
+
+    {{ include('reclamation/_formadmin.html.twig', {'button_label': 'Save'}) }}
+
+    <a href="{{ path('reclamation_index_admin') }}"class="btn btn-outline-primary">back to list</a>
+    {{ include('reclamation/_delete_form_admin.html.twig') }}
+{% endblock %}

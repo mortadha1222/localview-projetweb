@@ -73,5 +73,94 @@ class Planning
      */
     private $idCoach;
 
+    public function getIdPlanning(): ?int
+    {
+        return $this->idPlanning;
+    }
+
+    public function getCoachName(): ?string
+    {
+        return $this->coachName;
+    }
+
+    public function setCoachName(string $coachName): self
+    {
+        $this->coachName = $coachName;
+
+        return $this;
+    }
+
+    public function getCourse(): ?string
+    {
+        return $this->course;
+    }
+
+    public function setCourse(string $course): self
+    {
+        $this->course = $course;
+
+        return $this;
+    }
+
+    public function getStartlesson(): ?string
+    {
+        return $this->startlesson;
+    }
+
+    public function setStartlesson(string $startlesson): self
+    {
+        $this->startlesson = $startlesson;
+
+        return $this;
+    }
+
+    public function getEndlesson(): ?string
+    {
+        return $this->endlesson;
+    }
+
+    public function setEndlesson(string $endlesson): self
+    {
+        $this->endlesson = $endlesson;
+
+        return $this;
+    }
+
+    public function getMaxnbr(): ?int
+    {
+        return $this->maxnbr;
+    }
+
+    public function setMaxnbr(int $maxnbr): self
+    {
+        $this->maxnbr = $maxnbr;
+
+        return $this;
+    }
+
+    public function getNbractuel(): ?int
+    {
+        return $this->nbractuel;
+    }
+
+    public function setNbractuel(?int $nbractuel): self
+    {
+        $this->nbractuel = $nbractuel;
+
+        return $this;
+    }
+
+    public function getIdCoach(): ?Coach
+    {
+        return $this->idCoach;
+    }
+
+    public function setIdCoach(?Coach $idCoach): self
+    {
+        $this->idCoach = $idCoach;
+
+        return $this;
+    }
+
 
 }

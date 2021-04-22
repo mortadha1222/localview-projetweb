@@ -31,5 +31,22 @@ class Vendor
      */
     private $idUser;
 
+    public function getIdVendor(): ?int
+    {
+        return $this->idVendor;
+    }
+
+    public function getIdUser(): ?User
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(?User $idUser): self
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
 
 }
